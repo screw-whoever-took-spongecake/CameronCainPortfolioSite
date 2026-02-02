@@ -1,0 +1,24 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=PT+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: "PT Mono", monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  transition: background-image 0.3s ease-in-out;
+}
+
+/* Light mode background */
+html.light body {
+  background-image: linear-gradient(
+    to bottom,
+    #87CEEB 0%,
+    #B6E3F5 50%,
+    #E0F6FF 100%
+  ) !important;
+}

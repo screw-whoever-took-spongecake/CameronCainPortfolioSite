@@ -1,0 +1,133 @@
+import React, { useState, useEffect } from "react";
+import { Container, Carousel, Col, Row } from "react-bootstrap";
+import Particle from "../Particle";
+import Button from "react-bootstrap/Button";
+import band1 from "../../Assets/GC1.png";
+import band2 from "../../Assets/GC2.jpg";
+import band3 from "../../Assets/GC3.jpg";
+import band4 from "../../Assets/GC4.jpg";
+import band5 from "../../Assets/GC5.jpg";
+import band6 from "../../Assets/GC6.png";
+import { FaSpotify } from "react-icons/fa";
+import cc1 from "../../Assets/CC1_Square.jpg";
+import cc3 from "../../Assets/CC3.jpg";
+import Tilt from "react-parallax-tilt";
+
+const TITLE = "GLASSCULT";
+const DESCRIPTION = "Hazel Cochrane, Cameron Cain, Jessse Kopala, Liam Dali, Kade Wolfe";
+
+const CAROUSEL_IMAGES = [band1, band2, band3, band4, band5, band6];
+const CYCLE_IMAGES = [cc1, cc3];
+const FLIP_INTERVAL_MS = 5000;
+const FLIP_DURATION_MS = 1000;
+
+function Music() {
+  const [imageIndex, setImageIndex] = useState(0);
+  const [flipping, setFlipping] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFlipping(true);
+      setTimeout(() => setImageIndex((i) => (i + 1) % CYCLE_IMAGES.length), FLIP_DURATION_MS / 2);
+      setTimeout(() => setFlipping(false), FLIP_DURATION_MS);
+    }, FLIP_INTERVAL_MS);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div>
+      <Container>
+        <Row className="justify-content-center">
+          <Col xs="auto">
+            <br />
+            <br />
+            <Button
+              href="https://instagram.com/cameroncain_"
+              target="_blank"
+              className="fork-btn-inner music-button"
+            > 
+              <FaSpotify style={{ fontSize: "1.1em" }} />
+              &nbsp; Listen to my Music Here &nbsp;
+            </Button>
+            <br />
+            <br />
+            <br />
+          </Col>
+        </Row>
+        <Carousel fade>
+        {CAROUSEL_IMAGES.map((src, index) => (
+          <Carousel.Item key={index}>
+            <img src={src} alt={`Slide ${index + 1}`} />
+            <Carousel.Caption>
+              <h3>{TITLE}</h3>
+              <p>{DESCRIPTION}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+      </Container>
+
+      <Container fluid className="home-about-section" id="about">
+        <Container>
+          <Row>
+            <Col md={8} className="home-about-description">
+              <h1 style={{ fontSize: "2.6em" }}>
+                The Life and Times of{" "}
+                <span className="purple"> CAMERON CAIN </span>
+              </h1>
+              <p className="home-about-body">
+                I have been performing in bands around Calgary for the past 10
+                years. I am primarily a vocalist, utilizing clean and harsh
+                vocals in my projects, but I also am an avid drummer, bass
+                player, and guitar player. I have professional training as a
+                singer whereas my screaming and instrumental abilities are
+                entirely self-taught
+                <br />
+                <br />
+                I was previously the frontman of <span className="purple">Diamonds on Neptune</span>, a band I started with a friend in 2018. We have since disbanded but you can still find our music on all streaming services                <br />
+                <br />I draw inspiration from legendary vocalists such as
+                <b className="purple">
+                  {" "}
+                  <i>
+                    {" "}
+                    Greg Puciato, Chester Bennington, Gerard Way, and Jason
+                    Butler{" "}
+                  </i>
+                </b>
+                <br />
+                <br />I currently front a metalcore band called
+                <span className="purple"> GLASSCULT</span>
+                <br />
+                We strive to build a strong community and to bring awareness on
+                destructive religious hierarchies. Our music is fast and our performances or phrenetic and unpredictable
+              </p>
+            </Col>
+            <Col md={4} className="myAvtar">
+              <Tilt>
+                <div className="music-coin" style={{ perspective: "1000px" }}>
+                  <div className={`music-coin-inner ${flipping ? "music-coin-flip" : ""}`}>
+                    <img
+                      src={CYCLE_IMAGES[imageIndex]}
+                      alt="about"
+                      style={{
+                        borderRadius: "50%",
+                        width: 300,
+                        height: 300,
+                        background: "red",
+                        display: "block",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
+                </div>
+              </Tilt>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+      <Particle />
+    </div>
+  );
+}
+
+export default Music;
