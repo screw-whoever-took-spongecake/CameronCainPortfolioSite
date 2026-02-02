@@ -1,8 +1,3 @@
-# Portfolio
-
-Personal portfolio site built with React.
-
-![Demo](./Images/readme-img1.png)
 
 ## Tech Stack
 
