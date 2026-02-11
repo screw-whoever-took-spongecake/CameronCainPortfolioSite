@@ -10,7 +10,7 @@ function Type() {
           "QA Engineer",
           "SCRUM Master",
           "Musician",
-          "Voice Actor",
+          // "Voice Actor",
         ],
         autoStart: true,
         loop: true,

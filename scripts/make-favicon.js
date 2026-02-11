@@ -19,7 +19,7 @@ async function main() {
     .toBuffer();
 
   await sharp(logoPath)
-    .resize(SIZE, SIZE, { fit: "cover", position: "left" })
+    .resize(SIZE, SIZE, { fit: "cover", position: "center"  })
     .ensureAlpha()
     .composite([{ input: mask, blend: "dest-in" }])
     .png()

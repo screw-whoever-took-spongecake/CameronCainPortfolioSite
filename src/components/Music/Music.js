@@ -16,7 +16,7 @@ import Tilt from "react-parallax-tilt";
 
 const TITLE = "GLASSCULT";
 const DESCRIPTION =
-  "Hazel Cochrane, Cameron Cain, Jesse Kopala, Liam Dali, Kade Wolfe";
+  "Jesse Kopala, Cameron Cain, Hazel Cochrane, Kade Wolfe, Liam Dali";
 
 const CAROUSEL_IMAGES = [band6, band5, band4, band2, band1, band3];
 const CYCLE_IMAGES = [cc1, cc3, cc4];
