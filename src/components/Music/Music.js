@@ -73,7 +73,7 @@ function Music() {
               <img src={src} alt={`Slide ${index + 1}`} />
               <Carousel.Caption>
                 <h3>{TITLE}</h3>
-                <p>{DESCRIPTION}</p>
+                {/* <p>{DESCRIPTION}</p> */}
               </Carousel.Caption>
             </Carousel.Item>
           ))}
