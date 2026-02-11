@@ -85,6 +85,13 @@ function PracticeSpaceBookingForm() {
     return d;
   }, []);
 
+  const maxSelectableDate = useMemo(() => {
+    const d = new Date();
+    d.setMonth(d.getMonth() + 6);
+    d.setHours(23, 59, 59, 999);
+    return d;
+  }, []);
+
   const filterPastTime = (time) => {
     const t = new Date(time);
     const now = new Date();
@@ -383,6 +390,7 @@ function PracticeSpaceBookingForm() {
             className={INPUT_BASE}
             calendarClassName="react-datepicker-tailwind"
             minDate={startOfToday}
+            maxDate={maxSelectableDate}
             filterTime={filterPastTime}
           />
         </div>

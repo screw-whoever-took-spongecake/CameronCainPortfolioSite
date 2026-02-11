@@ -38,6 +38,7 @@ function Projects() {
       <Container>
         <h1 className="project-heading">
           {" "}
+          <br />
           My <strong className="purple">Practice Space </strong>{" "}
         </h1>
         <p>
