@@ -96,7 +96,7 @@ function NavBar() {
                 to="/music"
                 onClick={() => updateExpanded(false)}
               >
-                <FaMusic style={{ marginBottom: "2px", marginRight: "5px" }} />  Music
+                <FaMusic style={{ marginBottom: "2px", marginRight: "6px" }} />  Music
               </Nav.Link>
             </Nav.Item>
 
@@ -106,7 +106,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px", marginRight: "3px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
 
@@ -116,7 +116,7 @@ function NavBar() {
                 to="/practicespace"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineCalendar style={{ marginBottom: "2px" }} /> Practice
+                <AiOutlineCalendar style={{ marginBottom: "2px", marginRight: "5px" }} /> Practice
                 Space
               </Nav.Link>
             </Nav.Item>
@@ -141,7 +141,7 @@ function NavBar() {
                 className="fork-btn-inner"
               >
                 Message Me &nbsp;
-                <CgInstagram style={{ fontSize: "1.1em", marginTop: "5px" }} />
+                <CgInstagram style={{ fontSize: "1.1em" }} />
               </Button>
             </Nav.Item>
           </Nav>

@@ -545,6 +545,32 @@ button:focus {
   justify-content: center !important;
   min-height: 40px;
   padding: 0.5rem 0.75rem !important;
+  position: relative;
+  overflow: visible;
+}
+
+.navbar .share-btn .fork-btn-inner::after,
+.navbar .navbar-nav .btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0;
+  border-radius: 16px;
+  background: #c95bf5;
+  z-index: 1;
+  transition: width 0.3s ease-out;
+}
+
+.navbar .share-btn .fork-btn-inner:hover::after,
+.navbar .navbar-nav .btn:hover::after {
+  width: 100%;
+}
+
+html.light .navbar .share-btn .fork-btn-inner::after,
+html.light .navbar .navbar-nav .btn::after {
+  background: #cc5500;
 }
 
 .navbar .navbar-actions-item {
