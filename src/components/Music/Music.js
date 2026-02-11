@@ -48,7 +48,7 @@ function Music() {
   }, []);
 
   return (
-    <div>
+    <div className="music-page">
       <Container>
         <Row className="justify-content-center">
           <Col xs="auto">
