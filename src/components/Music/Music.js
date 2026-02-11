@@ -63,8 +63,6 @@ function Music() {
               &nbsp; Listen to my Music Here &nbsp;
             </Button>
             <br />
-            <br />
-            <br />
           </Col>
         </Row>
         <Carousel fade>
@@ -138,7 +136,6 @@ function Music() {
               </Tilt>
             </Col>
           </Row>
-          <br />
           <br />
           <Button
             href="https://open.spotify.com/artist/5ECYNFQwqO6rG7sBwTX5sK?si=ALtr0D8kSKqfsNl95FTXbA"
