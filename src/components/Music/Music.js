@@ -28,15 +28,23 @@ function Music() {
   const [flipping, setFlipping] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timeoutIds = { t1: null, t2: null };
+    const intervalId = setInterval(() => {
       setFlipping(true);
-      setTimeout(
+      timeoutIds.t1 = setTimeout(
         () => setImageIndex((i) => (i + 1) % CYCLE_IMAGES.length),
         FLIP_DURATION_MS / 2,
       );
-      setTimeout(() => setFlipping(false), FLIP_DURATION_MS);
+      timeoutIds.t2 = setTimeout(
+        () => setFlipping(false),
+        FLIP_DURATION_MS,
+      );
     }, FLIP_INTERVAL_MS);
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(intervalId);
+      if (timeoutIds.t1) clearTimeout(timeoutIds.t1);
+      if (timeoutIds.t2) clearTimeout(timeoutIds.t2);
+    };
   }, []);
 
   return (
@@ -121,7 +129,6 @@ function Music() {
                         borderRadius: "50%",
                         width: 300,
                         height: 300,
-                        background: "red",
                         display: "block",
                         objectFit: "cover",
                       }}

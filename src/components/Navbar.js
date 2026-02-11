@@ -55,7 +55,6 @@ function NavBar() {
                 borderRadius: "50%",
                 width: 50,
                 height: 50,
-                background: "red",
                 display: "block",
                 objectFit: "cover",
               }}
@@ -130,7 +129,7 @@ function NavBar() {
                 <ImLinkedin style={{ marginBottom: "2px", marginRight: "5px" }} /> LinkedIn
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item className="navbar-actions-item d-flex align-items-center">
+            <Nav.Item className="navbar-actions-item navbar-theme-toggle-item d-flex align-items-center">
               <ThemeToggle />
             </Nav.Item>
 

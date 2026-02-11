@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from "react";
+import React, { useState, useRef, useMemo, useCallback } from "react";
 import DatePicker from "react-datepicker";
 import ReCAPTCHA from "react-google-recaptcha";
 import "react-datepicker/dist/react-datepicker.css";
@@ -92,7 +92,7 @@ function PracticeSpaceBookingForm() {
     return d;
   }, []);
 
-  const filterPastTime = (time) => {
+  const filterPastTime = useCallback((time) => {
     const t = new Date(time);
     const now = new Date();
     const isToday =
@@ -101,7 +101,7 @@ function PracticeSpaceBookingForm() {
       t.getFullYear() === now.getFullYear();
     if (isToday) return t.getTime() > now.getTime();
     return true;
-  };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
