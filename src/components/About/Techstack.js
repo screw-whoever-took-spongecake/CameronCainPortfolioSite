@@ -14,7 +14,6 @@ import Mongo from "../../Assets/TechIcons/Mongo.svg";
 import Postgresql from "../../Assets/TechIcons/Postgresql.svg";
 import Tailwind from "../../Assets/TechIcons/Tailwind.svg";
 import MUI from "../../Assets/TechIcons/MUI.svg";
-import Postman from "../../Assets/TechIcons/Postman.svg";
 import Csharp from "../../Assets/TechIcons/Csharp.svg";
 import MySQL from "../../Assets/TechIcons/MySQL.svg";
 import HTML from "../../Assets/TechIcons/HTML5.svg";
@@ -22,18 +21,15 @@ import Svelte from "../../Assets/TechIcons/Svelte.svg";
 import Dart from "../../Assets/TechIcons/Dart.svg";
 import Flutter from "../../Assets/TechIcons/Flutter.svg";
 import Cypress from "../../Assets/TechIcons/Cypress.svg";
-import Playwrite from "../../Assets/TechIcons/Playwrite.svg";
+import Playwright from "../../Assets/TechIcons/Playwrite.svg";
 import Selenium from "../../Assets/TechIcons/Selenium.svg";
 import Pytest from "../../Assets/TechIcons/pytest.svg";
 import Sqlite from "../../Assets/TechIcons/SQLite.svg";
-import SQLDev from "../../Assets/TechIcons/SQLDev.svg";
-
+import SQLServer from "../../Assets/TechIcons/SQLServer.svg";
 
 function Techstack() {
   return (
-
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-
       <Col xs={4} md={2} className="tech-icons">
         <img src={Angular} alt="go" width={25} height={25} />
         <div className="tech-icons-text">Angular</div>
@@ -50,7 +46,7 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <img src={Cypress} alt="Cypress" height={30} width={30}/>
+        <img src={Cypress} alt="Cypress" height={30} width={30} />
         <div className="tech-icons-text">Cypress</div>
       </Col>
 
@@ -110,28 +106,23 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
+        <img src={Playwright} alt="Playwright" height={25} width={25} />
+        <div className="tech-icons-text">Playwright </div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
         <img src={Postgresql} alt="Postgresql" />
         <div className="tech-icons-text">Postgresql</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <img src={Playwrite} alt="Playwrite" height={25} width={25} />
-        <div className="tech-icons-text">Playwrite </div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Postman} alt="Postman" />
-        <div className="tech-icons-text">Postman</div>
+        <img src={Pytest} alt="pytest" width={25} height={25} />
+        <div className="tech-icons-text">Pytest</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
         <img src={Python} alt="Python" />
         <div className="tech-icons-text">Python</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Pytest} alt="pytest" width={25} height={25}/>
-        <div className="tech-icons-text">Pytest</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
@@ -150,13 +141,13 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <img src={SQLDev} alt="SQLDev" height={25} width={25} />
-        <div className="tech-icons-text">SQL </div>
+        <img src={Sqlite} alt="Sqlite" height={25} width={25} />
+        <div className="tech-icons-text">SQLite </div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <img src={Sqlite} alt="Sqlite" height={25} width={25} />
-        <div className="tech-icons-text">SQLite </div>
+        <img src={SQLServer} alt="SQL Server" height={25} width={25} />
+        <div className="tech-icons-text">SQL Server</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
@@ -168,7 +159,6 @@ function Techstack() {
         <img src={Typescript} alt="typescript" />
         <div className="tech-icons-text">Typescript</div>
       </Col>
-
     </Row>
   );
 }

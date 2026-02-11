@@ -13,7 +13,7 @@ import ThemeToggle from "./ThemeToggle";
 import {
   AiOutlineHome,
   AiOutlineUser,
-  AiOutlineCalendar
+  AiOutlineCalendar,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -44,17 +44,24 @@ function NavBar() {
       expand="lg"
       className={navColour ? "sticky" : "navbar"}
     >
-      <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="logo" alt="brand" style={{
-            borderRadius: "50%",
-            width: 50,
-            height: 50,
-            background: "red",
-            display: "block",
-            objectFit: "cover"
-          }} />
-        </Navbar.Brand>
+      <Container className="d-flex align-items-center">
+        <div className="navbar-logo-offset">
+          <Navbar.Brand href="/" className="d-flex">
+            <img
+              src={logo}
+              className="logo"
+              alt="brand"
+              style={{
+                borderRadius: "50%",
+                width: 50,
+                height: 50,
+                background: "red",
+                display: "block",
+                objectFit: "cover",
+              }}
+            />
+          </Navbar.Brand>
+        </div>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -69,7 +76,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: "2px", marginRight: "5px" }} /> Home
               </Nav.Link>
             </Nav.Item>
 
@@ -79,7 +86,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px", marginRight: "5px" }} /> About
               </Nav.Link>
             </Nav.Item>
 
@@ -89,7 +96,7 @@ function NavBar() {
                 to="/music"
                 onClick={() => updateExpanded(false)}
               >
-                <FaMusic style={{ marginBottom: "2px" }} /> Music
+                <FaMusic style={{ marginBottom: "2px", marginRight: "5px" }} />  Music
               </Nav.Link>
             </Nav.Item>
 
@@ -109,10 +116,8 @@ function NavBar() {
                 to="/practicespace"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineCalendar
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Practice Space
+                <AiOutlineCalendar style={{ marginBottom: "2px" }} /> Practice
+                Space
               </Nav.Link>
             </Nav.Item>
 
@@ -122,21 +127,21 @@ function NavBar() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <ImLinkedin /> LinkedIn
+                <ImLinkedin style={{ marginBottom: "2px", marginRight: "5px" }} /> LinkedIn
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item className="d-flex align-items-center" style={{ marginLeft: '10px', marginRight: '10px' }}>
+            <Nav.Item className="navbar-actions-item d-flex align-items-center">
               <ThemeToggle />
             </Nav.Item>
 
-            <Nav.Item className="share-btn">
+            <Nav.Item className="share-btn navbar-actions-item">
               <Button
                 href="https://instragram.com/cameroncain_"
                 target="_blank"
                 className="fork-btn-inner"
               >
                 Message Me &nbsp;
-                <CgInstagram style={{ fontSize: "1.1em" }} />
+                <CgInstagram style={{ fontSize: "1.1em", marginTop: "5px" }} />
               </Button>
             </Nav.Item>
           </Nav>

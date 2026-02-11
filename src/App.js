@@ -11,7 +11,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
@@ -19,11 +19,11 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [load, upadateLoad] = useState(true);
+  const [load, updateLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      upadateLoad(false);
+      updateLoad(false);
     }, 1200);
 
     return () => clearTimeout(timer);
@@ -36,14 +36,14 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <main style={{ flex: 1 }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
+          <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/practicespace" element={<Projects />} />
-          <Route path="/about" element={<About />} />
+            <Route path="/about" element={<About />} />
             <Route path="/music" element={<Music />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
+            <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
         </main>
         <Footer />
       </div>

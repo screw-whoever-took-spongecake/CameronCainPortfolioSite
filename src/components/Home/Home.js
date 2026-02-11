@@ -5,13 +5,8 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 
-import {
-  AiFillGithub,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-
-
 
 function Home() {
   return (
@@ -29,10 +24,11 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-                My name is <strong className="main-name"> CAMERON STEINBURG</strong>
+                My name is{" "}
+                <strong className="main-name"> CAMERON STEINBURG</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div className="home-type-wrapper" style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
             </Col>
@@ -96,4 +92,3 @@ function Home() {
 }
 
 export default Home;
-

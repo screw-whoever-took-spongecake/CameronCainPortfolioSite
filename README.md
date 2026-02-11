@@ -1,4 +1,3 @@
-
 ## Tech Stack
 
 - **React** (v19)
@@ -8,6 +7,7 @@
 - **react-datepicker** – practice space booking date/time
 - **react-tsparticles** – particle background
 - **Formspree** – booking form submissions (no backend required)
+- **react-google-recaptcha** – reCAPTCHA v2 checkbox on practice space booking form
 - **Create React App** – build tooling
 
 ## Features
@@ -46,6 +46,14 @@ REACT_APP_FORMSPREE_URL=https://formspree.io/f/xxxxxxxx
 
 Create a form at [Formspree](https://formspree.io/) and paste the form endpoint URL into `.env`.
 
+To enable the reCAPTCHA v2 checkbox (recommended to reduce spam), create a v2 key in the [Google reCAPTCHA admin console](https://www.google.com/recaptcha/admin), add the **secret key** in your Formspree form settings (Settings → reCAPTCHA), and add the **site key** to `.env`:
+
+```
+REACT_APP_RECAPTCHA_SITE_KEY=your_reCAPTCHA_v2_site_key
+```
+
+If `REACT_APP_RECAPTCHA_SITE_KEY` is not set, the form still works but submissions are not protected by reCAPTCHA.
+
 ## Project structure
 
 - `src/components/` – main sections: Home, About, Projects (incl. booking form), Music, Resume, Navbar, Footer
@@ -54,7 +62,7 @@ Create a form at [Formspree](https://formspree.io/) and paste the form endpoint 
 
 ## Scripts
 
-| Command        | Description              |
-|----------------|--------------------------|
-| `npm start`    | Run development server   |
-| `npm run build`| Production build         | 
+| Command         | Description            |
+| --------------- | ---------------------- |
+| `npm start`     | Run development server |
+| `npm run build` | Production build       |

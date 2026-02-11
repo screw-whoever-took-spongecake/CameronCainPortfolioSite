@@ -1,9 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
@@ -21,7 +18,7 @@ function Footer() {
               <a
                 href="https://github.com/screw-whoever-took-spongecake"
                 className="text-white dark:text-white text-dark-charcoal"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
@@ -31,7 +28,7 @@ function Footer() {
               <a
                 href="https://www.linkedin.com/in/cameron-steinburg-72a468b2/"
                 className="text-white dark:text-white text-dark-charcoal"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
@@ -41,7 +38,7 @@ function Footer() {
               <a
                 href="https://www.instagram.com/cameroncain_"
                 className="text-white dark:text-white text-dark-charcoal"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />

@@ -6,10 +6,11 @@ import Vscode from "../../Assets/TechIcons/vscode.svg";
 import Cursor from "../../Assets/TechIcons/cursor.svg";
 import Windows from "../../Assets/TechIcons/Windows11.svg";
 import Ubuntu from "../../Assets/TechIcons/Ubuntu.svg";
-import Jira from "../../Assets/TechIcons/Jira.svg"; 
+import Jira from "../../Assets/TechIcons/Jira.svg";
 import DevOps from "../../Assets/TechIcons/AzureDevops.svg";
 import Slack from "../../Assets/TechIcons/Slack.svg";
-import SQLServer from "../../Assets/TechIcons/SQLServer.svg";
+import Postman from "../../Assets/TechIcons/Postman.svg";
+import SQLDev from "../../Assets/TechIcons/SQLDev.svg";
 import VisualStudio from "../../Assets/TechIcons/VisualStudio.svg";
 import Homebrew from "../../Assets/TechIcons/Homebrew.svg";
 import Figma from "../../Assets/TechIcons/Figma.svg";
@@ -18,7 +19,6 @@ import DBeaver from "../../Assets/TechIcons/DBeaver.svg";
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-
       <Col xs={4} md={2} className="tech-icons ">
         <img src={DevOps} alt="DevOps" className="tech-icon-images" />
         <div className="tech-icons-text">DevOps</div>
@@ -65,8 +65,13 @@ function Toolstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons ">
-        <img src={SQLServer} alt="SQLServer" className="tech-icon-images" />
-        <div className="tech-icons-text">SQLServer</div>
+        <img src={Postman} alt="Postman" className="tech-icon-images" />
+        <div className="tech-icons-text">Postman</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons ">
+        <img src={SQLDev} alt="SQL Developer" className="tech-icon-images" />
+        <div className="tech-icons-text">SQL Developer</div>
       </Col>
 
       <Col xs={4} md={2} className="tech-icons ">
@@ -80,7 +85,11 @@ function Toolstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons ">
-        <img src={VisualStudio} alt="VisualStudio" className="tech-icon-images" />
+        <img
+          src={VisualStudio}
+          alt="VisualStudio"
+          className="tech-icon-images"
+        />
         <div className="tech-icons-text">Visual Studio</div>
       </Col>
 
@@ -88,8 +97,6 @@ function Toolstack() {
         <img src={Windows} alt="Windows" className="tech-icon-images" />
         <div className="tech-icons-text">Windows</div>
       </Col>
-
-
     </Row>
   );
 }

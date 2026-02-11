@@ -4,12 +4,12 @@ import { useTheme } from "../context/ThemeContext";
 
 function Particle() {
   const { theme } = useTheme();
-  
+
   // Only render particles in dark mode
-  if (theme === 'light') {
+  if (theme === "light") {
     return null;
   }
-  
+
   return (
     <Particles
       id="tsparticles"
