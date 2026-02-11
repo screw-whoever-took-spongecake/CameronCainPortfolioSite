@@ -14,7 +14,7 @@ const MAX_BAND_NAME = 30;
 const MAX_PHONE = 15;
 
 /** Only letters (a-z, A-Z) and dashes allowed for name fields */
-const sanitizeName = (value) => value.replace(/[^a-zA-Z\-]/g, "");
+const sanitizeName = (value) => value.replace(/[^a-zA-Z-]/g, "");
 
 function PracticeSpaceBookingForm() {
   const { theme } = useTheme();
