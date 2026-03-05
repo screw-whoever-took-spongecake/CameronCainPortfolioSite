@@ -77,7 +77,6 @@ function Music() {
           ))}
         </Carousel>
       </Container>
-
       <Container fluid className="home-about-section" id="about">
         <Container>
           <Row>
